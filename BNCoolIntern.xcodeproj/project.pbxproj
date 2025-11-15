@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B9930E142E4D2C4100F07F3B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9930E132E4D2C4100F07F3B /* FirebaseAuth */; };
+		B9930E162E4D2C4100F07F3B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B9930E152E4D2C4100F07F3B /* FirebaseCore */; };
+		B9930E182E4D2C4100F07F3B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9930E172E4D2C4100F07F3B /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B9930E022E4D2BAA00F07F3B /* BNCoolIntern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNCoolIntern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9930E162E4D2C4100F07F3B /* FirebaseCore in Frameworks */,
+				B9930E142E4D2C4100F07F3B /* FirebaseAuth in Frameworks */,
+				B9930E182E4D2C4100F07F3B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = BNCoolIntern;
 			packageProductDependencies = (
+				B9930E132E4D2C4100F07F3B /* FirebaseAuth */,
+				B9930E152E4D2C4100F07F3B /* FirebaseCore */,
+				B9930E172E4D2C4100F07F3B /* FirebaseFirestore */,
 			);
 			productName = BNCoolIntern;
 			productReference = B9930E022E4D2BAA00F07F3B /* BNCoolIntern.app */;
@@ -94,6 +106,9 @@
 			);
 			mainGroup = B9930DF92E4D2BAA00F07F3B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B9930E122E4D2C4100F07F3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B9930E032E4D2BAA00F07F3B /* Products */;
 			projectDirPath = "";
@@ -256,11 +271,13 @@
 				DEVELOPMENT_TEAM = 29KA7NQK59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BNCoolInternApp-AbdullahBaspinar";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,11 +305,13 @@
 				DEVELOPMENT_TEAM = 29KA7NQK59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BNCoolInternApp-AbdullahBaspinar";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +351,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9930E122E4D2C4100F07F3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9930E132E4D2C4100F07F3B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9930E122E4D2C4100F07F3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B9930E152E4D2C4100F07F3B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9930E122E4D2C4100F07F3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		B9930E172E4D2C4100F07F3B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9930E122E4D2C4100F07F3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9930DFA2E4D2BAA00F07F3B /* Project object */;
 }

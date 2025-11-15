@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
 
 struct ContentView: View {
+    @StateObject private var authService = AuthService()
+    private let videoService = VideoService()
+    @State private var isAuthenticated = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if authService.isAuthenticated {
+                VideoListView(videoService: videoService, authService: authService)
+            } else {
+                LoginView(authService: authService)
+            }
         }
-        .padding()
     }
 }
 
